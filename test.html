@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="/js/jquery-1.9.1.min.js" ></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(".flip").text("点击这里▼")
+            $(".flip").mouseenter(function(){
+                $(".flip").text(  $(".panel").is(':hidden')?"点击这里▲":"点击这里▼")
+
+                $(".panel").slideToggle("slow");
+            });
+        });
+    </script>
+
+    <style type="text/css">
+        div.panel,p.flip
+        {
+            margin:0px;
+            padding:5px;
+            text-align:center;
+            background:#e5eecc;
+            border:solid 1px #c3c3c3;
+        }
+        div.panel
+        {
+            height:120px;
+            display:none;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="panel">
+    <p>Eiege.com</p>
+    <p>jquery专栏，学习和交流。Eiege专栏</p>
+</div>
+
+<p class="flip"></p>
+
+</body>
+</html>
